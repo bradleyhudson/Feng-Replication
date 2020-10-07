@@ -42,7 +42,200 @@ check_p1 <- feng_rt %>%
 
 length(check_p1$participant)
 
+check_p2 <- feng_rt %>%
+  filter(participant == '2')
+
+length(check_p2$participant)
+
+check_p3 <- feng_rt %>%
+  filter(participant == '3')
+
+length(check_p3$participant)
   
+check_p4 <- feng_rt %>%
+  filter(participant == '4')
+
+length(check_p4$participant)
+
+check_p5 <- feng_rt %>%
+  filter(participant == '5')
+
+length(check_p5$participant)
+
+check_p6 <- feng_rt %>%
+  filter(participant == '6')
+
+length(check_p6$participant)
+
+check_p7 <- feng_rt %>%
+  filter(participant == '7')
+
+length(check_p7$participant)
+
+check_p8 <- feng_rt %>%
+  filter(participant == '8')
+
+length(check_p8$participant)
+
+check_p9 <- feng_rt %>%
+  filter(participant == '9')
+
+length(check_p9$participant)
+
+check_p10 <- feng_rt %>%
+  filter(participant == '10')
+
+length(check_p10$participant)
+
+check_p11 <- feng_rt %>%
+  filter(participant == '11')
+
+length(check_p11$participant)
+
+check_p12 <- feng_rt %>%
+  filter(participant == '12')
+
+length(check_p12$participant)
+
+check_p13 <- feng_rt %>%
+  filter(participant == '13')
+
+length(check_p13$participant)
+
+check_p14 <- feng_rt %>%
+  filter(participant == '14')
+
+length(check_p14$participant)
+
+check_p15 <- feng_rt %>%
+  filter(participant == '15')
+
+length(check_p15$participant)
+
+check_p16 <- feng_rt %>%
+  filter(participant == '16')
+
+length(check_p16$participant)
+
+check_p17 <- feng_rt %>%
+  filter(participant == '17')
+
+length(check_p17$participant)
+
+check_p18 <- feng_rt %>%
+  filter(participant == '18')
+
+length(check_p18$participant)
+
+check_p19 <- feng_rt %>%
+  filter(participant == '19')
+
+length(check_p19$participant)
+
+check_p20 <- feng_rt %>%
+  filter(participant == '20')
+
+length(check_p20$participant)
+
+check_p21 <- feng_rt %>%
+  filter(participant == '21')
+
+length(check_p21$participant)
+
+check_p22 <- feng_rt %>%
+  filter(participant == '22')
+
+length(check_p22$participant)
+
+check_p23 <- feng_rt %>%
+  filter(participant == '23')
+
+length(check_p23$participant)
+
+check_p24 <- feng_rt %>%
+  filter(participant == '24')
+
+length(check_p24$participant)
+
+check_p25 <- feng_rt %>%
+  filter(participant == '25')
+
+length(check_p25$participant)
+
+check_p26 <- feng_rt %>%
+  filter(participant == '26')
+
+length(check_p26$participant)
+
+check_p27 <- feng_rt %>%
+  filter(participant == '27')
+
+length(check_p27$participant)
+
+check_p28 <- feng_rt %>%
+  filter(participant == '28')
+
+length(check_p28$participant)
+
+check_p29 <- feng_rt %>%
+  filter(participant == '29')
+
+length(check_p29$participant)
+
+check_p30 <- feng_rt %>%
+  filter(participant == '30')
+
+length(check_p30$participant)
+
+check_p31 <- feng_rt %>%
+  filter(participant == '31')
+
+length(check_p31$participant)
+
+check_p32 <- feng_rt %>%
+  filter(participant == '32')
+
+length(check_p32$participant)
+
+check_p33 <- feng_rt %>%
+  filter(participant == '33')
+
+length(check_p33$participant)
+
+check_p34 <- feng_rt %>%
+  filter(participant == '34')
+
+length(check_p34$participant)
+
+check_p35 <- feng_rt %>%
+  filter(participant == '35')
+
+length(check_p35$participant)
+
+check_p36 <- feng_rt %>%
+  filter(participant == '36')
+
+length(check_p36$participant)
+
+check_p37 <- feng_rt %>%
+  filter(participant == '37')
+
+length(check_p37$participant)
+
+check_p38 <- feng_rt %>%
+  filter(participant == '38')
+
+length(check_p38$participant)
+
+check_p39 <- feng_rt %>%
+  filter(participant == '39')
+
+length(check_p39$participant)
+
+check_p40 <- feng_rt %>%
+  filter(participant == '40')
+
+length(check_p40$participant)
 
 feng_mw <- feng_clean %>%
   filter(probe == "y", response != "space") %>%
@@ -57,14 +250,23 @@ feng_mw <- feng_clean %>%
 
 feng_comp <- feng_clean %>%
   filter(comprehension_q == 'y') %>% # to keep rows with responses to comprehension questions
-  filter(passage == 1 & line != "5") # to keep rows with probe-specific comprehension questions - passage 1
-
+  filter(passage == 1 & line != "5") # to keep rows with probe-specific comprehension questions - passage 1 
+  filter(passage == 2 & line != "3")
+  filter(passage == 2 & line != "4")
+  filter(passage == 3 & line != "3")
+  filter(passage == 3 & line != "4")
+  filter(passage == 5 & line != "3")
+  filter(passage == 6 & line != "3") # Num_probs = 5 and number of Qs = 4. Numbers match for other passages.
+  filter(passage == 7 & line != "1")
+  filter(passage == 7 & line != "4")
+  filter(passage == 8 & line != "") # Need to work out whether it's 1 or 4 to be removed.
+  
 
 #group <-  rep(c("Native Signers","Controls"), each = 8400)
 #fragment_ID <-  rep(c("Overlapping"), times = 16800)
 #fragment_UNR <- rep(c("Unrelated"), times = 16800)
 vec_Sen_Num <- rep(c(1:7,1:2,1:2,1:4,1:3,1:5,1:2,1:3), times = 92)
-vec_Num_Probs <- rep(c(7,7,7,7,7,7,7,2,2))
+vec_Num_Probs <- rep(c(7,7,7,7,7,7,7,2,2,2,2,4,4,4,4,3,3,3,5,5,5,5,5,2,2,3,3,3), times = 92) # 5,5,5,5,5?
 
 
 
